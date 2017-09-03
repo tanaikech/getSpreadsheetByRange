@@ -1,7 +1,7 @@
 # Retrieving Spreadsheet ID from Range using Google Apps Script
 This report has been written by [Alexander Ivanov](https://github.com/oshliaer) and [me](https://github.com/tanaikech).
 
-This is a simple way for retrieving Spreadsheet ID from a range. As an application, we introduce the enhanced copyTo() which can copy from a range to other Spreadsheet.
+This is a simple way for retrieving Spreadsheet ID from a range. As an application, we introduce the enhanced ``copyTo()`` which can copy from a range to other Spreadsheet.
 
 ## 1. Basic Principle
 The first sample script is for retrieving spreadsheet ID from a range using Google Apps Script. We sometimes want to retrieve spreadsheet ID from ranges. In such case, we can use this.
