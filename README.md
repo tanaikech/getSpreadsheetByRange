@@ -57,4 +57,30 @@ function copyToo(srcrange, dstrange) {
 }
 ~~~
 
+### Usage
+~~~javascript
+function copyToo(srcrange, dstrange) {
+    var dstSS = dstrange.getSheet().getParent();
+    var copiedsheet = srcrange.getSheet().copyTo(dstSS);
+    copiedsheet.getRange(srcrange.getA1Notation()).copyTo(dstrange);
+    dstSS.deleteSheet(copiedsheet);
+}
+
+function main() {
+    // Source
+    var range = "a1:b5";
+    var ss = SpreadsheetApp.getActiveSpreadsheet();
+    var srcrange = ss.getActiveSheet().getRange(range);
+
+    // Destination
+    var range = "c1:d5";
+    var dstid = "### file id ###";
+    var dst = "### sheet name ###";
+    var dstrange = SpreadsheetApp.openById(dstid).getSheetByName(dst).getRange(range);
+
+    copyToo(srcrange, dstrange); // Copy from srcrange to dstrange.
+}
+~~~
+
+
 If this was useful for you, we are glad.
